@@ -1,87 +1,49 @@
-# 🧠 Predicting Systemic Crises in African Countries (1860–2014)
+# Predicting Systemic Financial Crises in African Countries (1860–2014)
 
-## 📌 Project Overview
+## Project Overview
 
-This machine learning project uses historical economic data from 13 African countries to predict whether a **systemic financial crisis** will occur. The aim is to build a classification model that learns patterns from indicators like **inflation rates** and predicts the likelihood of a crisis.
+This project applies machine learning techniques to analyze historical economic data from 13 African countries. The goal is to build a predictive model that identifies the likelihood of a systemic financial crisis based on key indicators such as inflation rates and crisis history.
 
----
+This work demonstrates practical skills in data cleaning, feature engineering, model selection, and evaluation—applying machine learning in a real-world policy and economic setting.
 
-## 🌍 Dataset Description
+## Dataset Description
 
-- **Source:** Kaggle (Image preview: [link](https://i.imgur.com/3XzFz3x.jpg))
-- **Countries:** Algeria, Angola, Egypt, Kenya, Nigeria, South Africa, Zimbabwe, etc.
-- **Years Covered:** 1860 – 2014
-- **Main Crises Tracked:**
-  - Systemic Crisis (Target variable)
-  - Banking Crisis
-  - Debt Crisis
-  - Inflation Crisis
-- **Other Variables:** Annual inflation rate, year, country, etc.
+The dataset includes records from 1860 to 2014, covering:
+- Crisis types: Systemic, Banking, Inflation, and Debt crises
+- Economic indicators: Annual inflation rates and more
+- Countries: Algeria, Angola, Egypt, Kenya, Nigeria, South Africa, Zimbabwe, and others
 
----
+The target variable is whether or not a **systemic crisis** occurred in a given country-year.
 
-## 🎯 Objective
+## Key Steps
 
-> **Predict whether a country will experience a systemic crisis** based on economic indicators.
-
-This is a **binary classification** task (Yes = 1, No = 0).
-
----
-
-## ✅ Workflow Summary
-
-1. **Data Loading & Exploration**
-   - Display data shape, types, null values
-   - Generate profiling report
+1. **Data Exploration**
+   - Reviewed structure, data types, and missing values
+   - Generated data profiling report for quick insights
 
 2. **Data Cleaning**
-   - Handle missing values
-   - Remove duplicates
-   - Encode categorical features
-   - Handle outliers
+   - Handled missing values and duplicates
+   - Encoded categorical variables
+   - Addressed outliers
 
 3. **Feature Selection**
-   - Define target: `systemic_crisis`
-   - Select meaningful features (like inflation rate, year)
+   - Identified relevant predictors (e.g., inflation, country, year)
+   - Defined `systemic_crisis` as the target variable
 
-4. **Data Splitting**
-   - Train/Test split (e.g., 80/20)
+4. **Model Training**
+   - Split data into training and test sets
+   - Applied and evaluated classification models (e.g., logistic regression, random forest)
 
-5. **Modeling**
-   - Train ML models (Logistic Regression, Random Forest, etc.)
-   - Use best model based on evaluation
+5. **Evaluation**
+   - Measured accuracy, precision, recall, and F1-score
+   - Interpreted results and identified ways to improve
 
-6. **Evaluation**
-   - Accuracy, Precision, Recall, F1-score
-   - Confusion matrix
+## Outcome
 
----
+The final model provides an early warning signal for financial instability, based on past trends and economic signals. This has potential value in government planning, financial sector policy, and academic research.
 
-## 📈 Expected Outcome
+## Future Improvements
 
-- A trained classification model that can **predict the emergence of a systemic crisis**.
-- Insights on how economic indicators relate to financial collapses.
-
----
-
-## 🧠 Future Improvements
-
-- Try other ML algorithms (XGBoost, SVM)
-- Add feature scaling or engineering
-- Use time-based cross-validation for historical data
-
----
-
-## 🤝 Team Discussion
-
-The results can be improved by:
-- Hyperparameter tuning
-- Adding more country-specific financial features
-- Handling class imbalance if present
-
----
-
-## 👨‍💻 Author
-
-**Bryan Waweru**  
-Data Science & ML Enthusiast | Kenya  
+- Incorporate additional macroeconomic features
+- Explore time-series approaches
+- Tune hyperparameters and test more advanced models
